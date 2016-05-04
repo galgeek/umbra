@@ -27,6 +27,13 @@ behaviors:
    url_regex: '^https?://(?:www\.)?instagram\.com/.*$'
    behavior_js: instagram.js
    request_idle_timeout_sec: 10
+ - # ARI-4838 racineco.com document viewers WIP; need to click PDFs?
+   url_regex: '^https?://(?:www\.)?racineco\.com/.*$'
+   behavior_js_template: clicksubclick.js.template
+   default_parameters:
+      section_selector: td[id^='NavtwocolUserControl11_NavMeeting_item']
+      sub_selector: .GridFooterText>a
+   request_idle_timeout_sec: 10
  -
    url_regex: '^https?://(?:www\.)?brooklynmuseum\.org/exhibitions/.*$'
    behavior_js_template: simpleclicks.js.template
