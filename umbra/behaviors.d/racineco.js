@@ -8,6 +8,8 @@ var umbraBehavior = {
 		var somethingLeftBelow = false;
 		var somethingLeftAbove = false;
 		// var cssSelector = "${click_css_selector}";
+		var clickUntilTimeout = false;
+    
 
 		//handle Python to JavaScript boolean conversion
 		clickUntilTimeout == "True" ? clickUntilTimeout = true : clickUntilTimeout = false;
