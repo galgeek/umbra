@@ -249,8 +249,9 @@ class Chrome:
                 "--use-mock-keychain", # mac thing
                 "--user-data-dir={}".format(self.user_data_dir),
                 "--remote-debugging-port={}".format(self.port),
+                "--disable-extensions",
                 "--disable-web-sockets", "--disable-cache",
-                "--window-size=1100,900", "--no-default-browser-check",
+                "--window-size=1280,1024", "--no-default-browser-check",
                 "--disable-first-run-ui", "--no-first-run",
                 "--homepage=about:blank", "--disable-direct-npapi-requests",
                 "--disable-web-security", "--disable-notifications",
