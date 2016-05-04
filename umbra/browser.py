@@ -250,10 +250,11 @@ class Chrome:
                 "--user-data-dir={}".format(self.user_data_dir),
                 "--remote-debugging-port={}".format(self.port),
                 "--disable-web-sockets", "--disable-cache",
-                "--window-size=1100,900", "--no-default-browser-check",
+                "--disable-extensions",
+                "--window-size=1280,1024", "--no-default-browser-check",
                 "--disable-first-run-ui", "--no-first-run",
                 "--homepage=about:blank", "--disable-direct-npapi-requests",
-                "--disable-web-security", "--disable-notifications",
+                "--disable-notifications",
                 "--disable-save-password-bubble", "--user-agent=\"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36\"",
                 "about:blank"]
         self.logger.info("running {}".format(chrome_args))
