@@ -47,19 +47,19 @@ var umbraBehavior = {
 					racinecoSections[i].umbraClicked = true;
 
           racinecoSectionPages = document.querySelectorAll(".GridFooterText>a");
-          if (racinecoSectionPages.length == 0) {
+          if (racinecoSectionPages.length < 1) {
             continue;
           }
           for (var p = 0; p < racinecoSectionPages.length; p++) {
-  					console.log("clicking on " + racinecoSectionPages[i].outerHTML);
+  					console.log("clicking on " + racinecoSectionPages[p].outerHTML);
   					// do mouse over event on click target
   					// since some urls are requsted only on
   					// this event - see
   					// https://webarchive.jira.com/browse/AITFIVE-451
   					var mouseOverEvent = document.createEvent('Events');
   					mouseOverEvent.initEvent("mouseover",true, false);
-  					racinecoSectionPages[i].dispatchEvent(mouseOverEvent);
-  					racinecoSectionPages[i].click();
+  					racinecoSectionPages[p].dispatchEvent(mouseOverEvent);
+  					racinecoSectionPages[p].click();
   					this.idleSince = null;
           }
 				} else if (where > 0) {
