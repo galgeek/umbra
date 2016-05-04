@@ -29,9 +29,7 @@ behaviors:
    request_idle_timeout_sec: 10
  - # ARI-4838 racineco.com document viewers
    url_regex: '^https?://(?:www\.)?racineco\.com/.*$'
-   behavior_js_template: multiclicks.js.template
-   default_parameters:
-      click_css_selector: td[id^='NavtwocolUserControl11_NavMeeting_item']
+   behavior_js_template: racineco.js
    request_idle_timeout_sec: 10
  -
    url_regex: '^https?://(?:www\.)?brooklynmuseum\.org/exhibitions/.*$'
